@@ -1,0 +1,299 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #444;
+  padding: 25px 50px;
+  font-size: 1.6em;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 500px;
+  border-top-left-radius: 16px;
+  /* use 4 pixel increments */
+  border-top-right-radius: 16px;
+  border: 3px solid #fff;
+  background: url('../assets/images/headerBkg.png');
+  background-size: cover;
+  background-position: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  text-align: center;
+  font-size: 1.6em;
+  padding-top: 150px;
+  color: #fff;
+  text-shadow: 2px 2px 7px #333;
+}
+
+header>p {
+  color: #0f0;
+  font-weight: 500;
+  font-size: 1.2em;
+  /*background: rgba(255, 255, 255, 0.33);*/
+}
+
+section {
+  width: 100%;
+  min-height: 300px;
+  padding: 45px 50px;
+  border: 3px solid #fff;
+}
+
+/* ============== About Section ==============*/
+
+#aboutSection {
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  color: #333;
+  align-items: center;
+  gap: 30px;
+}
+
+#aboutSection img {
+  width: 250px;
+  height: 250px;
+  border: 1px solid #000;
+  border-radius: 2%;
+
+}
+
+#aboutSection p {
+  margin: 0;
+  text-align: justify;
+  max-width: 100%;
+  font-size: 0.8em;
+}
+
+/* ============== Career Goals Section ==============*/
+.fancyHeading {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-decoration: underline;
+  font-size: 1.6em;
+
+}
+
+/*
+  #000 - black
+  #f00 - red
+  #0f0 - green
+  #00b - blue
+  #fff - white
+*/
+/*#careerGoals {
+  background: #222;
+  color: #fff;
+  padding-left: 50px;
+}
+*/
+
+#careerGoals {
+  background: #fff;
+  color: #000;
+  padding-left: 50px;
+}
+
+ol {
+  padding-left: 50px;
+  font-size: 0.8em;
+  margin-top: 10px;
+}
+
+/* ============== Skill Section ==============*/
+
+#mySkill {
+  background: url(../assets/images/BKG_Image1.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+}
+
+#mySkill h1 {
+  text-align: left;
+  padding-left: 50px;
+}
+
+.thumbnail-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  padding: 30px 50px;
+  align-items: center;
+  justify-items: center;
+}
+
+.thumbnail {
+  background: #f00;
+  width: 100%;
+  max-width: 250px;
+  height: 250px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 2px solid #777;
+  box-shadow: 2px 3px 5px #222;
+  display: block;
+}
+
+
+/* ============== Project Section ==============*/
+
+#workSamples {
+  background: #fff;
+  color: #000;
+  text-align: center;
+  padding: 30px 0;
+}
+
+#workSamples>h1 {
+  text-align: left;
+  padding-left: 50px;
+  margin-top: -10px;
+}
+
+#projects h1 {
+  font-size: 0.6em;
+  margin: 10px 0;
+
+}
+
+#projects {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  padding: 20px 50px;
+  margin-bottom: -30px;
+}
+
+/* Hover effect for project images */
+.thumbnail:hover {
+  transform: scale(1.05);
+  /* Slightly enlarge the image on hover */
+  transition: transform 0.3s ease;
+  /* Smooth transition */
+}
+
+/* ============== Contact Section ==============*/
+#contact {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  font-size: 1em;
+  font-weight: 300;
+  font-style: normal;
+}
+
+#contact>a:link {
+  color: #fff;
+}
+
+.socialMedia {
+  margin: 0 10px;
+}
+
+footer {
+  text-align: right;
+  padding-right: 50px;
+  padding-top: 10px;
+  font-size: .9em;
+  color: #fff;
+}
+
+/* =========================== Media Queries ============================*/
+
+
+/* ============= Header Section==============*/
+@media (max-width: 576px) {
+  header {
+    height: 300px;
+    font-size: 0.9em;
+    padding-top: 80px;
+  }
+
+  header>p {
+    font-size: 0.8em;
+  }
+}
+
+/* ============= About Section==============*/
+@media (max-width: 1200px) {
+  #aboutSection {
+    grid-template-columns: 1fr;
+
+  }
+}
+
+/* ============= My Skills Section==============*/
+
+/* Large tablets and small laptops */
+
+@media (max-width: 1200px) {
+  .thumbnail-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* iPads in portrait mode */
+@media (max-width: 992px) {
+  .thumbnail-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablets in landscape mode */
+@media (max-width: 768px) {
+  .thumbnail-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 576px) {
+  .thumbnail-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============= Work Sample Section==============*/
+
+/* Large tablets and small laptops */
+
+@media (max-width: 1200px) {
+  #projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* iPads in portrait mode */
+@media (max-width: 992px) {
+  #projects {
+    grid-template-columns: repeat(3, 1fr);
+
+  }
+}
+
+/* Tablets in landscape mode */
+@media (max-width: 768px) {
+  #projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 576px) {
+  #projects {
+    grid-template-columns: 1fr;
+  }
+}
