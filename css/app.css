@@ -100,12 +100,17 @@ section {
   background: #fff;
   color: #000;
   padding-left: 50px;
+
 }
 
 ol {
   padding-left: 50px;
   font-size: 0.8em;
   margin-top: 10px;
+}
+
+#goal{
+ margin-top: -40px;
 }
 
 /* ============== Skill Section ==============*/
