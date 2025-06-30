@@ -268,6 +268,7 @@ footer {
 @media (max-width: 576px) {
   .thumbnail-container {
     grid-template-columns: 1fr;
+    
   }
 }
 
@@ -301,4 +302,5 @@ footer {
   #projects {
     grid-template-columns: 1fr;
   }
+  
 }
