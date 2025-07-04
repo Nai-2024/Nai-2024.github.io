@@ -6,8 +6,8 @@
 }
 
 body {
-  background: #444;
-  padding: 25px 50px;
+  background: #777;
+  padding: 25px 25px;
   font-size: 1.6em;
   font-family: "Poppins", sans-serif;
 }
@@ -77,8 +77,9 @@ section {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-style: normal;
-  text-decoration: underline;
   font-size: 1.6em;
+  text-align: left;
+  padding-left: 50px;
 
 }
 
@@ -111,6 +112,7 @@ ol {
 
 #goal{
  margin-top: -40px;
+ margin-left: -50px;
 }
 
 /* ============== Skill Section ==============*/
@@ -124,10 +126,7 @@ ol {
   padding: 30px 0;
 }
 
-#mySkill h1 {
-  text-align: left;
-  padding-left: 50px;
-}
+
 
 .thumbnail-container {
   display: grid;
@@ -143,6 +142,7 @@ ol {
   width: 100%;
   max-width: 250px;
   height: 250px;
+  object-fit: cover; /* This is the key line */
   background-color: #fff;
   border-radius: 5px;
   border: 2px solid #777;
@@ -155,20 +155,15 @@ ol {
 
 #workSamples {
   background: #fff;
-  color: #000;
   text-align: center;
   padding: 30px 0;
 }
 
-#workSamples>h1 {
-  text-align: left;
-  padding-left: 50px;
-  margin-top: -10px;
-}
 
 #projects h1 {
   font-size: 0.6em;
   margin: 10px 0;
+  padding-top: 10px;
 
 }
 
@@ -177,7 +172,6 @@ ol {
   grid-template-columns: repeat(5, 1fr);
   gap: 30px;
   padding: 20px 50px;
-  margin-bottom: -30px;
 }
 
 /* Hover effect for project images */
@@ -192,28 +186,31 @@ ol {
 #contact {
   background: #222;
   color: #fff;
-  text-align: center;
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
   font-size: 1em;
   font-weight: 300;
   font-style: normal;
+
 }
 
-#contact>a:link {
-  color: #fff;
+#contact h1 {
+ text-align: center;
+ margin-right: 50px;
 }
 
-.socialMedia {
-  margin: 0 10px;
+
+.contact-details a {
+  color: #0f0;
+  text-decoration: none;
 }
 
-footer {
-  text-align: right;
-  padding-right: 50px;
-  padding-top: 10px;
-  font-size: .9em;
-  color: #fff;
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
+#contact p {
+  text-align: center;
 }
 
 /* =========================== Media Queries ============================*/
