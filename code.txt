@@ -1,0 +1,135 @@
+
+
+
+    <section id="mySkill">
+      <h1 class="fancyHeading">TECHNOLOGIES/SOFT SKILLS</h1>
+      <div class="thumbnail-container" id="skills">
+        <img src="assets/icons/html.png" alt="HTML5 logo" class="thumbnail" />
+        <img src="assets/icons/css.png" alt="CSS3 logo" class="thumbnail" />
+        <img
+          src="assets/icons/js.png"
+          alt="JavaScript logo"
+          class="thumbnail"
+        />
+        <img src="assets/icons/java.png" alt="Java logo" class="thumbnail" />
+        <img src="assets/icons/swift.png" alt="Swift logo" class="thumbnail" />
+        <img
+          src="assets/icons/wordpress.png"
+          alt="WordPress logo"
+          class="thumbnail"
+        />
+        <img src="assets/icons/mysql.png" alt="SQL logo" class="thumbnail" />
+        <img src="assets/icons/php.png" alt="PHP logo" class="thumbnail" />
+        <img
+          src="assets/icons/angular.png"
+          alt="Angular logo"
+          class="thumbnail"
+        />
+        <img src="assets/icons/react.png" alt="React logo" class="thumbnail" />
+        <img
+          src="assets/icons/photoshop.png"
+          alt="Adobe Photoshop logo"
+          class="thumbnail"
+        />
+        <img
+          src="assets/icons/gitHub.png"
+          alt="GitHub logo"
+          class="thumbnail"
+        />
+        <img src="assets/icons/xd.png" alt="Adobe XD logo" class="thumbnail" />
+        <img
+          src="assets/icons/illsutrator.png"
+          alt="Adobe Illustrator logo"
+          class="thumbnail"
+        />
+        <img
+          src="assets/icons/photoshop.png"
+          alt="Adobe Photoshop logo"
+          class="thumbnail"
+        />
+      
+         <img
+          src="assets/icons/android-studio.png"
+          alt="Adobe Photoshop logo"
+          class="thumbnail"
+        />
+         <img
+          src="assets/icons/vscode.png"
+          alt="Adobe Photoshop logo"
+          class="thumbnail"
+        />
+
+         <img
+          src="assets/icons/xcode.png"
+          alt="Adobe Photoshop logo"
+          class="thumbnail"
+        />
+      </div>
+    </section>
+
+
+    <section id="workSamples">
+      <h1 class="fancyHeading">PROJECTS</h1>
+      <div class="thumbnail-container" id="projects">
+        <div class="projectsShowcase">
+          <a href="https://nai-2024.github.io/Event_Calculator">
+            <img
+              src="assets/images/Event Calc BKG.png"
+              alt="Event Calc BKG"
+              class="thumbnail"
+            />
+            <h1>Event Calculator App</h1>
+          </a>
+        </div>
+        <div class="projectsShowcase">
+          <a href="https://apex-builders-iosapp.netlify.app">
+            <img
+              src="assets/images/const.jpg"
+              alt="Home Builder BKG"
+              class="thumbnail"
+            />
+            <h1>Apex Builders</h1>
+          </a>
+        </div>
+        <div class="projectsShowcase">
+          <a href="https://nai-motors.netlify.app/">
+            <img
+              src="assets/images/nai-motors.png"
+              alt="nai-motors"
+              class="thumbnail"
+            />
+            <h1>Nai Motors Android App</h1>
+          </a>
+        </div>
+        <div class="projectsShowcase">
+          <a href="https://nairesturant.wordpress.com/">
+            <img
+              src="assets/images/naiResturant.png"
+              alt="naiResturant"
+              class="thumbnail"
+            />
+            <h1>Nai Resturant WordPress</h1>
+          </a>
+        </div>
+        <div class="projectsShowcase">
+          <a href="#">
+            <img src="assets/images/logo1.png" alt="logo 5" class="thumbnail" />
+            <h1>Project 05</h1>
+          </a>
+        </div>
+      </div>
+    </section>
+
+      <section id="contact">
+      <h1 class="fancyHeading">Contact Info:</h1>
+      <div class="contact-details">
+        <p>
+          <strong>Phone:</strong> <a href="tel:+14373882490">437-388-2490</a>
+        </p>
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:salehy1405@gmail.com">salehy1405@gmail.com</a>
+        </p>
+      </div>
+      <p>&copy; Nai-2024, All rights reserved.</p>
+    </section>

@@ -6,23 +6,47 @@
 }
 
 body {
-  background: #777;
-  padding: 25px 25px;
   font-size: 1.6em;
   font-family: "Poppins", sans-serif;
 }
 
+nav {
+  width: 100%;
+  height: 70px;
+  background-color: #0b1032;
+  padding: 10px 50px;
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 1000;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding-top: 10px;
+  display: flex;
+  justify-content: flex-end; /* align links to the right */
+  gap: 30px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #00bcd4;
+}
+
 header {
   width: 100%;
-  height: 500px;
-  border-top-left-radius: 16px;
-  /* use 4 pixel increments */
-  border-top-right-radius: 16px;
-  border: 3px solid #fff;
-  background: url('../assets/images/headerBkg.png');
+  height: 400px;
+  background: url("../assets/images/headerBkg.png");
   background-size: cover;
   background-position: center;
-  font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-style: normal;
   text-align: center;
@@ -32,7 +56,7 @@ header {
   text-shadow: 2px 2px 7px #333;
 }
 
-header>p {
+header > p {
   color: #0f0;
   font-weight: 500;
   font-size: 1.2em;
@@ -42,8 +66,7 @@ header>p {
 section {
   width: 100%;
   min-height: 300px;
-  padding: 45px 50px;
-  border: 3px solid #fff;
+  padding: 40px 50px;
 }
 
 /* ============== About Section ==============*/
@@ -62,7 +85,6 @@ section {
   height: 250px;
   border: 1px solid #000;
   border-radius: 2%;
-
 }
 
 #aboutSection p {
@@ -72,47 +94,33 @@ section {
   font-size: 0.8em;
 }
 
+#hr {
+  width: 90%; /* Adjust width: 50%, 30%, or exact px */
+  margin: 0px auto; /* Adds vertical spacing + centers */
+  border: none; /* Removes default browser style */
+  height: 1px; /* Controls thickness */
+  background-color: #ccc; /* Sets line color */
+  opacity: 0.5; /* Optional: makes it softer */
+}
+
 /* ============== Career Goals Section ==============*/
 .fancyHeading {
-  font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-style: normal;
   font-size: 1.6em;
   text-align: left;
-  padding-left: 50px;
-
+  padding-top: 0;
 }
-
-/*
-  #000 - black
-  #f00 - red
-  #0f0 - green
-  #00b - blue
-  #fff - white
-*/
-/*#careerGoals {
-  background: #222;
-  color: #fff;
-  padding-left: 50px;
-}
-*/
 
 #careerGoals {
   background: #fff;
   color: #000;
-  padding-left: 50px;
-
+  margin-top: -20px;
 }
 
-ol {
+ul {
   padding-left: 50px;
   font-size: 0.8em;
-  margin-top: 10px;
-}
-
-#goal{
- margin-top: -40px;
- margin-left: -50px;
 }
 
 /* ============== Skill Section ==============*/
@@ -123,26 +131,25 @@ ol {
   background-position: center;
   color: #fff;
   text-align: center;
-  padding: 30px 0;
+  padding: 30px 50px;
 }
-
-
 
 .thumbnail-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 30px;
-  padding: 30px 50px;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 26px;
   align-items: center;
   justify-items: center;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 
 .thumbnail {
-  background: #f00;
   width: 100%;
-  max-width: 250px;
-  height: 250px;
-  object-fit: cover; /* This is the key line */
+  max-width: 180px;
+  height: 180px;
+  object-fit: cover;
   background-color: #fff;
   border-radius: 5px;
   border: 2px solid #777;
@@ -150,71 +157,168 @@ ol {
   display: block;
 }
 
+/* Flip card container */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  max-width: 180px;
+  height: 180px;
+}
+
+/* Inner part for flipping */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+/* Show flip on hover */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front and back faces */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Front of card */
+.flip-card-front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Back of card */
+.flip-card-back {
+  background-color: #f0f0f0;
+  color: black;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
 
 /* ============== Project Section ==============*/
 
-#workSamples {
-  background: #fff;
-  text-align: center;
-  padding: 30px 0;
-}
-
-
-#projects h1 {
-  font-size: 0.6em;
-  margin: 10px 0;
-  padding-top: 10px;
-
-}
-
-#projects {
+.project-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 30px;
-  padding: 20px 50px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive */
+  justify-items: center;
+  width: 100%;
 }
 
-/* Hover effect for project images */
-.thumbnail:hover {
-  transform: scale(1.05);
-  /* Slightly enlarge the image on hover */
+.project-grid a {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Horizontal centering */
+  justify-content: center; /* Vertical centering */
+  background: none;
+  width: 230px;
+  height: 260px;
+  text-decoration: none;
+  color: #333;
   transition: transform 0.3s ease;
-  /* Smooth transition */
+  padding: 0;
+  margin: 0;
+}
+
+.project-grid a:hover {
+  transform: scale(1.03);
+}
+
+.project-grid img {
+  width: 95%;
+  height: 90%;
+  border-radius: 2px;
+}
+
+.project-grid h2 {
+  padding: 10px;
+  font-size: 13px;
 }
 
 /* ============== Contact Section ==============*/
-#contact {
-  background: #222;
-  color: #fff;
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-  font-size: 1em;
-  font-weight: 300;
-  font-style: normal;
 
+footer {
+  background: #0b1032;
+  color: #ffffff;
+  padding: 40px 50px;
+  font-family: Arial, sans-serif;
 }
 
-#contact h1 {
- text-align: center;
- margin-right: 50px;
+.footer-container {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  align-items: start;
 }
 
-
-.contact-details a {
-  color: #0f0;
+.footer-left p,
+a {
+  padding-left: 20px;
+  padding-top: 14px;
+  padding-bottom: 20px;
+  text-align: justify;
+  font-size: 0.8em;
+  color: #ffffff;
   text-decoration: none;
 }
 
-.contact-details a:hover {
-  text-decoration: underline;
+/* ----------- Footer right ------------ */
+
+.footer-right {
+  display: flex;
+  justify-content: flex-end; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  padding-right: 30px;
 }
 
-#contact p {
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* align items to left */
+  gap: 13px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center; /* vertical center alignment */
+  gap: 15px; /* space between icon and text */
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2); /* Increase size by 20% */
+  border-radius: 4px;
+}
+
+.social-icon > p {
+  font-size: 13px;
+}
+
+footer > hr {
+  width: 100%;
+  height: 1px;
+  opacity: 0.3;
+}
+.footer-bottom {
   text-align: center;
+  padding-top: 12px;
+  font-size: 14px;
+  color: #aaa;
 }
 
 /* =========================== Media Queries ============================*/
-
 
 /* ============= Header Section==============*/
 @media (max-width: 576px) {
@@ -224,7 +328,7 @@ ol {
     padding-top: 80px;
   }
 
-  header>p {
+  header > p {
     font-size: 0.8em;
   }
 }
@@ -233,7 +337,6 @@ ol {
 @media (max-width: 1200px) {
   #aboutSection {
     grid-template-columns: 1fr;
-
   }
 }
 
@@ -265,7 +368,6 @@ ol {
 @media (max-width: 576px) {
   .thumbnail-container {
     grid-template-columns: 1fr;
-    
   }
 }
 
@@ -283,7 +385,6 @@ ol {
 @media (max-width: 992px) {
   #projects {
     grid-template-columns: repeat(3, 1fr);
-
   }
 }
 
@@ -299,5 +400,23 @@ ol {
   #projects {
     grid-template-columns: 1fr;
   }
-  
+}
+
+/* ============= Footer Section==============*/
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: stretch; /* ensures full-width children */
+    gap: 30px; /* optional spacing between left and right */
+  }
+
+  .footer-left,
+  .footer-right {
+    width: 100%;
+  }
+
+  .footer-right {
+    justify-content: flex-start; /* optional: aligns content to left */
+    margin-top: 0; /* remove overlap margin */
+  }
 }
