@@ -321,11 +321,16 @@ footer > hr {
 /* =========================== Media Queries ============================*/
 
 /* ============= Header Section==============*/
+
 @media (max-width: 576px) {
   header {
     height: 300px;
     font-size: 0.9em;
-    padding-top: 80px;
+    display: flex;              /* use flexbox */
+    flex-direction: column;     /* stack h1 and p */
+    justify-content: center;    /* center vertically */
+    align-items: center;        /* center horizontally */
+    text-align: center;         /* ensure text aligns */
   }
 
   header > p {
@@ -420,3 +425,18 @@ footer > hr {
     margin-top: 0; /* remove overlap margin */
   }
 }
+
+/*
+Header
+@media (max-width: 576px) {
+  header {
+    height: 300px;
+    font-size: 0.9em;
+    padding-top: 80px;
+  }
+
+  header > p {
+    font-size: 0.8em;
+  }
+}
+  */
