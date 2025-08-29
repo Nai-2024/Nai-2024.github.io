@@ -44,9 +44,9 @@ const projects = [
     link: "https://nairesturant.wordpress.com/"
   },
   {
-    name: "Project 05",
-    img: "assets/images/logo1.png",
-    link: "#"
+    name: "Nai Mart - Web App",
+    img: "assets/images/nai-mart.png",
+    link: "https://nai-mart.netlify.app/"
   }
 ];
 
