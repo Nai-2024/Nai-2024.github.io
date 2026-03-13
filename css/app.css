@@ -27,7 +27,7 @@ nav {
   margin: 0;
   padding: 0; /* Ensures no default padding */
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
   gap: 30px;
 }
@@ -60,7 +60,7 @@ header {
 }
 
 header > p {
-  color: #0f0;
+  color: rgb(0, 255, 217);
   font-weight: 500;
   font-size: 1.2em;
   /*background: rgba(255, 255, 255, 0.33);*/
@@ -106,13 +106,33 @@ section {
   opacity: 0.5; /* Optional: makes it softer */
 }
 
+.aboutText {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#aboutSection img {
+  align-self: start;
+}
+
 /* ============== Career Goals Section ==============*/
 .fancyHeading {
   font-weight: 600;
-  font-style: normal;
-  font-size: 1.6em;
-  text-align: left;
-  padding-top: 0;
+  font-size: 1.3em;
+  letter-spacing: 1px;
+  color: #0b1032;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.fancyHeading::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #00bcd4;
+  margin-top: 6px;
 }
 
 #careerGoals {
@@ -137,6 +157,12 @@ ul {
   padding: 30px 50px;
 }
 
+#mySkill .fancyHeading {
+  color: #ffffff;
+  text-align: left;
+  padding-bottom: 25px;
+}
+
 .thumbnail-container {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -155,8 +181,8 @@ ul {
   object-fit: cover;
   background-color: #fff;
   border-radius: 5px;
-  border: 2px solid #777;
-  box-shadow: 2px 3px 5px #222;
+  border: 1px solid #888;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
   display: block;
 }
 
@@ -211,42 +237,73 @@ ul {
 }
 
 /* ============== Project Section ==============*/
-
+#workSamples {
+  background: #eef3f8;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive */
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
   justify-items: center;
   width: 100%;
+  padding-top: 25px;
 }
 
 .project-grid a {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Horizontal centering */
-  justify-content: center; /* Vertical centering */
-  background: none;
-  width: 230px;
-  height: 260px;
+  align-items: center;
+
+  background: #ffffff; /* card background */
+  padding: 18px; /* space around image */
+  border-radius: 10px; /* rounded card */
+  border: 1px solid #e4e8ef;
   text-decoration: none;
   color: #333;
-  transition: transform 0.3s ease;
-  padding: 0;
-  margin: 0;
+  transition: transform 0.3s ease,box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 210px;
+
+  
 }
 
 .project-grid a:hover {
-  transform: scale(1.03);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.15);
 }
 
 .project-grid img {
-  width: 95%;
-  height: 90%;
-  border-radius: 2px;
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.project-grid img {
+  filter: contrast(1.08) saturate(1.05);
 }
 
 .project-grid h2 {
-  padding: 10px;
+  margin-top: 10px;
   font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.4;
+  color: #1c2742;
+}
+
+.project-grid a {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.project-grid a:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.15);
 }
 
 /* ============== Contact Section ==============*/
@@ -263,7 +320,9 @@ footer {
   grid-template-columns: 80% 20%;
   align-items: start;
 }
-
+.footer-left h1 {
+  color: #fff;
+}
 .footer-left p,
 a {
   padding-left: 20px;
@@ -312,7 +371,7 @@ a {
 footer > hr {
   width: 100%;
   height: 1px;
-  opacity: 0.3;
+  opacity: 0.2;
 }
 .footer-bottom {
   text-align: center;
@@ -338,9 +397,6 @@ footer > hr {
 /* ============= Header Section==============*/
 
 @media screen and (max-width: 576px) {
-  body {
-    background: yellow !important;
-  }
   header {
     height: 300px;
     font-size: 0.9em;

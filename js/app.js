@@ -17,40 +17,41 @@ const skills = [
   { src: "assets/icons/gitHub.png", name: "GitHub" },
   { src: "assets/icons/android-studio.png", name: "Android Studio" },
   { src: "assets/icons/vscode.png", name: "VS Code" },
-  { src: "assets/icons/xcode.png", name: "Xcode" }
+  { src: "assets/icons/xcode.png", name: "Xcode" },
 ];
-
-
 
 const projects = [
   {
     name: "Event Calculator App",
     img: "assets/images/Event Calc BKG.png",
-    link: "https://nai-2024.github.io/Event_Calculator"
+    link: "https://nai-2024.github.io/Event_Calculator",
   },
   {
     name: "Apex Builders - iOS App",
     img: "assets/images/const.jpg",
-    link: "https://apex-builders-iosapp.netlify.app"
+    link: "https://apex-builders-iosapp.netlify.app",
   },
   {
     name: "Nai Motors - Android App",
     img: "assets/images/nai-motors.png",
-    link: "https://nai-motors.netlify.app/"
+    link: "https://nai-motors.netlify.app/",
   },
   {
     name: "Nai Resturant - WordPress",
     img: "assets/images/naiResturant.png",
-    link: "https://nairesturant.wordpress.com/"
+    link: "https://nairesturant.wordpress.com/",
   },
   {
     name: "Nai Mart - Web App",
     img: "assets/images/nai-mart.png",
-    link: "https://nai-mart.netlify.app/"
-  }
+    link: "https://nai-mart.netlify.app/",
+  },
+  {
+    name: "Travel Admin Dashboard",
+    img: "assets/images/destinations-dashboard.png",
+    link: "https://destigations-dashboard.netlify.app",
+  },
 ];
-
-
 
 // Function to display skills
 function renderSkills(skillsArray, containerSelector) {
