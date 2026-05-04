@@ -37,9 +37,9 @@ const projects = [
     link: "https://nai-motors.netlify.app/",
   },
   {
-    name: "Nai Resturant - WordPress",
-    img: "assets/images/naiResturant.png",
-    link: "https://nairesturant.wordpress.com/",
+    name: "Nai Kebab House – Modern Restaurant Website",
+    img: "assets/images/naikebab.png",
+    link: "https://naikebab.com",
   },
   {
     name: "Nai Mart - Web App",
